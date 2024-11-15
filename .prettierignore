@@ -1,0 +1,21 @@
+# Ignore artifacts:
+build
+coverage
+
+# Ignore all HTML files:
+*.html
+*.DS_Store
+.gitignore
+.github/CODEOWNERS
+.gitattributes
+.prettierignore
+*.md
+*.sh
+*.env
+*.yml
+*.svg
+*.png 
+*.ico
+*.conf
+*.txt
+.vscode
