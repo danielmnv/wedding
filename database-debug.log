@@ -1,0 +1,14 @@
+17:34:08.095 [NamespaceSystem-akka.actor.default-dispatcher-4] INFO akka.event.slf4j.Slf4jLogger - Slf4jLogger started
+17:34:08.142 [main] INFO com.firebase.server.forge.App$ - Listening at 127.0.0.1:9000
+17:34:09.587 [NamespaceSystem-akka.actor.default-dispatcher-4] INFO com.firebase.core.namespace.NamespaceActor - wedding-f875c-default-rtdb successfully activated FBKV (SurveyIdle(0)) wait: 40ms, init: 0ms
+17:34:09.604 [NamespaceSystem-blocking-namespace-operation-dispatcher-7] INFO com.firebase.core.namespace.StateManager - Namespace wedding-f875c-default-rtdb status Active to Active
+12:20:37.469 [FirebaseWorkerPool-1-3] WARN com.firebase.core.persistence.backend.dummy.EmulatorMetadataPersistence - Multiple projectIds are not recommended in single project mode. Requested 
+namespace wedding-f875c, but the emulator is configured for wedding-f875c-default-rtdb. To 
+opt-out of single project mode add/set the singleProjectMode: false property in 
+the firebase.json emulators config. 
+12:20:37.471 [NamespaceSystem-akka.actor.default-dispatcher-13] INFO com.firebase.core.namespace.NamespaceActor - wedding-f875c successfully activated FBKV (SurveyIdle(0)) wait: 1ms, init: 0ms
+12:20:37.509 [Thread-0] INFO com.firebase.server.forge.App$ - Attempting graceful shutdown.
+12:20:37.511 [NamespaceSystem-akka.actor.default-dispatcher-16] INFO com.firebase.core.namespace.Terminator$Terminator - 2 actors left to terminate: wedding-f875c, wedding-f875c-default-rtdb
+12:20:37.513 [NamespaceSystem-akka.actor.default-dispatcher-13] INFO com.firebase.core.namespace.NamespaceActor - stopped namespace actor for wedding-f875c-default-rtdb
+12:20:37.513 [NamespaceSystem-akka.actor.default-dispatcher-11] INFO com.firebase.core.namespace.NamespaceActor - stopped namespace actor for wedding-f875c
+12:20:37.515 [Thread-0] INFO com.firebase.server.forge.App$ - Graceful shutdown complete.

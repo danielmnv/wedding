@@ -1,0 +1,216 @@
+{
+  "bride": {
+    "name": {
+      "firstName": "Patricia Carolina",
+      "lastName": "Viques Huerta"
+    },
+    "nickname": "Carolina",
+    "phoneNumber": "5214494944678",
+    "title": "Novia",
+    "parents": [
+      {
+        "name": {
+          "firstName": "Carmen Patricia",
+          "lastName": "Huerta Mendoza"
+        }
+      },
+      {
+        "name": {
+          "firstName": "Rubén",
+          "lastName": "Viques Sánchez"
+        }
+      }
+    ]
+  },
+  "groom": {
+    "name": {
+      "firstName": "Carlos Daniel",
+      "lastName": "Molina Vargas"
+    },
+    "nickname": "Daniel",
+    "phoneNumber": "5214492044278",
+    "title": "Novio",
+    "parents": [
+      {
+        "name": {
+          "firstName": "Rocío Candelaria",
+          "lastName": "Vargas Daniel"
+        }
+      },
+      {
+        "name": {
+          "firstName": "Juan Carlos",
+          "lastName": "Molina López"
+        }
+      }
+    ]
+  },
+  "sections": [
+    {
+      "type": "Relatives",
+      "title": "Cuenta Regresiva",
+      "displayOnNavbar": true,
+      "parents": {
+        "title": "Nuestros Padres",
+        "text": "Cultiven la paciencia, el respeto y la comunicación, y siempre sean el refugio del uno para el otro."
+      },
+      "godparents": {
+        "title": "Nuestros Padrinos",
+        "items": [
+          {
+            "object": "Velación",
+            "couple": [
+              {
+                "name": {
+                  "firstName": "Ilse Estefanía",
+                  "lastName": "Viques Huerta"
+                }
+              },
+              {
+                "name": {
+                  "firstName": "Alejandro",
+                  "lastName": "Valenciano"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "type": "Countdown",
+      "title": "Cuenta Regresiva",
+      "date": "2025-03-22T16:00:00",
+      "displayOnNavbar": false
+    },
+    {
+      "type": "Locations",
+      "title": "Ubicaciones",
+      "buttonText": "Ubicación",
+      "displayOnNavbar": true,
+      "items": [
+        {
+          "address": "Lic Miguel de la Madrid Hurtado 2602, Trojes de Kristal, 20118 Aguascalientes, Ags",
+          "background": "https://firebasestorage.googleapis.com/v0/b/wedding-invitation-dd705.appspot.com/o/church.jpg?alt=media&token=03340d9c-f645-40c9-8576-7955caedbaf1",
+          "name": "Capilla San Peregrino Laziosi",
+          "time": "16:00 hrs",
+          "title": "Ceremonia",
+          "url": "https://www.google.com/maps/dir/?api=1&destination=Capilla%20San%20Peregrino%20Laziosi&destination_place_id=ChIJ53gSKz7vKYQRP23IfD8w1X8"
+        },
+        {
+          "address": "Av. Guadalupe Gonzalez 1116, 20329 Pocitos, Ags.",
+          "background": "https://cdn0.bodas.com.mx/vendor/9559/3_2/960/jpg/37177593-237396550210132-3660136885876948992-n_5_199559-158214207322648.jpeg",
+          "name": "Casa de Piedra",
+          "time": "18:00 hrs",
+          "title": "Recepción",
+          "url": "https://www.google.com/maps/dir/?api=1&destination=Casa%20de%20Piedra&destination_place_id=ChIJ6ZxcFdTuKYQR0Mz8OuNo9dI"
+        }
+      ]
+    },
+    {
+      "type": "Schedule",
+      "title": "Cronograma",
+      "displayOnNavbar": true,
+      "items": [
+        {
+          "title": "Ceremonia",
+          "time": "16:00 hrs",
+          "symbol": "Ring"
+        },
+        {
+          "title": "Recepción",
+          "time": "18:00 hrs",
+          "symbol": "Drink"
+        },
+        {
+          "title": "Cena",
+          "time": "19:00 hrs",
+          "symbol": "Dinner"
+        },
+        {
+          "title": "Vals",
+          "time": "20:00 hrs",
+          "symbol": "Vals"
+        },
+        {
+          "title": "Baile",
+          "time": "20:30 hrs",
+          "symbol": "Dance"
+        },
+        {
+          "title": "Fin",
+          "time": "00:00 hrs",
+          "symbol": "Love"
+        }
+      ]
+    },
+    {
+      "type": "GiftRegistry",
+      "title": "Mesa de Regalos",
+      "displayOnNavbar": true,
+      "items": [
+        {
+          "symbol": "Liverpool",
+          "eventId": "51470561",
+          "text": "No. Evento:\n :eventId",
+          "url": "https://mesaderegalos.liverpool.com.mx/milistaderegalos/:eventId"
+        },
+        {
+          "symbol": "Amazon",
+          "eventId": "caro-daniel",
+          "text": ":eventId",
+          "url": "https://www.amazon.com.mx/wedding/share/:eventId"
+        }
+      ]
+    },
+    {
+      "type": "DressCode",
+      "title": "Código de Vestimenta",
+      "displayOnNavbar": false,
+      "items": [
+        {
+          "title": "Código de Vestimenta",
+          "symbol": ["Dress", "Suit"],
+          "description": "Formal, de etiqueta."
+        },
+        {
+          "title": "No Niños",
+          "symbol": "KidsNotAllowed",
+          "description": "Por favor, no llevar niños."
+        }
+      ]
+    },
+    {
+      "type": "RSVP",
+      "title": "Confirma tu Asistencia",
+      "search": {
+        "description": "Ingresa tu código de invitado para confirmar tu asistencia.",
+        "placeholder": "Código de Invitado",
+        "buttonText": "Ingresar",
+        "notFoundText": "No se encontró el código de invitado.",
+        "inputErrorText": "Ingresa un código de invitado válido."
+      },
+      "list": {
+        "description": "Selecciona a las personas que asistirán.",
+        "headerGuest": "Invitado",
+        "buttonText": "Confirmar",
+        "buttonCancelText": "Cerrar",
+        "message": {
+          "description": "¿Deseas dejar un mensaje?",
+          "placeholder": "(Opcional)"
+        }
+      },
+      "toastMessages": {
+        "loading": "Enviando...",
+        "success": "¡Confirmación enviada!",
+        "error": "¡Error al enviar la confirmación!"
+      },
+      "confirmation": {
+        "title": "Confirmación",
+        "description": "Gracias por confirmar tu asistencia.",
+        "buttonText": "Cerrar"
+      },
+      "displayOnNavbar": true
+    }
+  ]
+}
