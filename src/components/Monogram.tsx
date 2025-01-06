@@ -1,4 +1,5 @@
 import { IconProps } from './Icon';
+import { motion } from 'motion/react';
 
 export const Monogram = (props: IconProps) => (
   <svg
@@ -11,7 +12,7 @@ export const Monogram = (props: IconProps) => (
     {...props}
   >
     <g transform="translate(0.000000,1563.000000) scale(0.100000,-0.100000)" fill={props.stroke} stroke="none">
-      <path
+      <motion.path
         d="M6222 15140 c-630 -37 -1309 -214 -1837 -477 -800 -401 -1458 -1061
     -1864 -1872 -323 -644 -476 -1328 -458 -2041 17 -637 152 -1180 436 -1750 291
     -584 695 -1082 1201 -1482 72 -56 216 -161 268 -193 1 -1 -24 -44 -57 -96
@@ -52,6 +53,7 @@ export const Monogram = (props: IconProps) => (
     -165 805 -179 0 -12 -248 -103 -395 -145 -397 -114 -802 -165 -1308 -165 -672
     0 -1046 81 -1097 236 -17 50 -4 88 42 130 123 111 429 178 883 194 116 4 217
     7 225 8 8 1 101 -3 205 -8z"
+        className="cubic-bezier"
       />
     </g>
   </svg>

@@ -4,6 +4,9 @@ import Countdown, { CountdownRenderProps } from 'react-countdown';
 import { Text, Title } from '../components/Typography';
 import { Section } from '../components/Section';
 import { useApp } from '../hooks/use-app';
+import { Bride, Groom } from '../types/person';
+import { useAnimationView } from '../hooks/use-animation-view';
+import { Icon } from '../components/Icon';
 
 export const CountdownView = () => {
   const { countdown } = useApp();

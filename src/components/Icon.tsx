@@ -294,11 +294,17 @@ interface IconProperties {
   size?: 'sm' | 'md' | 'lg' | 'xl' | '2xl' | '3xl' | '4xl' | '5xl';
 }
 
-export const Icon: React.FC<SVGProps<SVGSVGElement> & IconProperties> = ({ symbol, size, stroke, ...props }) => {
+export const Icon: React.FC<SVGProps<SVGSVGElement> & IconProperties> = ({
+  symbol,
+  size,
+  stroke,
+  className,
+  ...props
+}) => {
   return (
     <>
       {Symbols[symbol]({
-        className: classNames({
+        className: classNames(className, {
           'w-4 h-4': size === 'sm',
           'w-6 h-6': size === 'md',
           'w-8 h-8': size === 'lg',
