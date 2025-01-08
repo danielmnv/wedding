@@ -1,10 +1,14 @@
 {
+  "metadata": {
+    "description": "Únete a nosotros para celebrar nuestro gran día lleno de amor y alegría. Descubre todos los detalles de nuestra boda y sé parte de este momento inolvidable. \uD83D\uDC8D\uD83D\uDC95'"
+  },
+  "date": "2025-03-22T16:00:00",
   "bride": {
     "name": {
       "firstName": "Patricia Carolina",
       "lastName": "Viques Huerta"
     },
-    "nickname": "Carolina",
+    "shortName": "Carolina",
     "phoneNumber": "5214494944678",
     "title": "Novia",
     "parents": [
@@ -27,7 +31,7 @@
       "firstName": "Carlos Daniel",
       "lastName": "Molina Vargas"
     },
-    "nickname": "Daniel",
+    "shortName": "Daniel",
     "phoneNumber": "5214492044278",
     "title": "Novio",
     "parents": [
@@ -47,9 +51,11 @@
   },
   "sections": [
     {
+      "type": "Headline",
+      "phrase": "En ti encontré mi hogar y mi eternidad"
+    },
+    {
       "type": "Relatives",
-      "title": "",
-      "displayOnNavbar": true,
       "parents": {
         "title": "Nuestros Padres",
         "text": "Cultiven la paciencia, el respeto y la comunicación, y siempre sean el refugio del uno para el otro."
@@ -79,15 +85,11 @@
     },
     {
       "type": "Countdown",
-      "title": "Cuenta Regresiva",
-      "date": "2025-03-22T16:00:00",
-      "displayOnNavbar": false
+      "title": "Cuenta Regresiva"
     },
     {
       "type": "Locations",
-      "title": "Ubicaciones",
       "buttonText": "Ubicación",
-      "displayOnNavbar": true,
       "items": [
         {
           "address": "Lic Miguel de la Madrid Hurtado 2602, Trojes de Kristal, 20118 Aguascalientes, Ags",
@@ -110,7 +112,6 @@
     {
       "type": "Schedule",
       "title": "Cronograma",
-      "displayOnNavbar": true,
       "items": [
         {
           "title": "Ceremonia",
@@ -147,7 +148,6 @@
     {
       "type": "GiftRegistry",
       "title": "Mesa de Regalos",
-      "displayOnNavbar": true,
       "items": [
         {
           "symbol": "Liverpool",
@@ -165,8 +165,6 @@
     },
     {
       "type": "DressCode",
-      "title": "Código de Vestimenta",
-      "displayOnNavbar": false,
       "items": [
         {
           "title": "Código de Vestimenta",
@@ -209,8 +207,7 @@
         "title": "Confirmación",
         "description": "Gracias por confirmar tu asistencia.",
         "buttonText": "Cerrar"
-      },
-      "displayOnNavbar": true
+      }
     }
   ]
 }

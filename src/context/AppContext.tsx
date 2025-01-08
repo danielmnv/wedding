@@ -9,6 +9,10 @@ import { Bride, Groom } from '../types/person';
 
 function parseSections(sections: EventSection[]): DictionarySection {
   return sections.reduce((acc: DictionarySection, section) => {
+    if (section.type === 'Headline') {
+      acc.headline = section;
+    }
+
     if (section.type === 'Relatives') {
       acc.relatives = section;
     }
@@ -42,6 +46,7 @@ function parseSections(sections: EventSection[]): DictionarySection {
 }
 
 const DEFAULT_VALUE: DictionarySection & {
+  date?: string;
   bride?: Bride;
   groom?: Groom;
 } = {};
@@ -50,16 +55,17 @@ export const AppContext = createContext(DEFAULT_VALUE);
 
 export const AppContextProvider = ({
   children,
+  date,
   bride,
   groom,
   sections,
-}: PropsWithChildren<{ bride: Bride; groom: Groom; sections: EventSection[] }>) => {
+}: PropsWithChildren<{ bride: Bride; groom: Groom; date: string; sections: EventSection[] }>) => {
   const dictionarySection = parseSections(sections);
 
   return (
-    <AppContext.Provider value={{ ...dictionarySection, bride, groom }}>
+    <AppContext.Provider value={{ ...dictionarySection, date, bride, groom }}>
       <ToastContainer />
-      <Navbar title={`${bride.nickname} & ${groom.nickname}`} />
+      <Navbar title={`${bride.shortName} & ${groom.shortName}`} />
 
       {children}
 

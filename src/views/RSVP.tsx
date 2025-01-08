@@ -95,7 +95,7 @@ const SearchInvitation = ({ title, search, setInvitation }: SearchInvitationProp
   const [error, setError] = useState<string>();
 
   const handleSearch = async () => {
-    if (!code || code.length !== 6) {
+    if (!code || code.length !== 4) {
       setError(search.inputErrorText);
       return;
     }
@@ -135,7 +135,7 @@ const SearchInvitation = ({ title, search, setInvitation }: SearchInvitationProp
             className="grow"
             placeholder={search.placeholder}
             value={code}
-            maxLength={6}
+            maxLength={4}
             onChange={({ target }) => {
               setCode(target.value);
               !!error && setError(undefined);

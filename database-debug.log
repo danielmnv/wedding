@@ -1,4 +1,0 @@
-20:12:53.031 [NamespaceSystem-akka.actor.default-dispatcher-4] INFO akka.event.slf4j.Slf4jLogger - Slf4jLogger started
-20:12:53.094 [main] INFO com.firebase.server.forge.App$ - Listening at 127.0.0.1:9000
-20:12:55.608 [NamespaceSystem-akka.actor.default-dispatcher-4] INFO com.firebase.core.namespace.NamespaceActor - wedding-f875c-default-rtdb successfully activated FBKV (SurveyIdle(0)) wait: 49ms, init: 0ms
-20:12:55.628 [NamespaceSystem-blocking-namespace-operation-dispatcher-7] INFO com.firebase.core.namespace.StateManager - Namespace wedding-f875c-default-rtdb status Active to Active

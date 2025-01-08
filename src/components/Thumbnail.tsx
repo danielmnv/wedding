@@ -1,7 +1,7 @@
-import NextImage, { ImageProps as NextImageProps } from 'next/image';
 import classNames from 'classnames';
+import { HTMLProps } from 'react';
 
-type ThumbnailProps = NextImageProps & {
+type ThumbnailProps = HTMLProps<HTMLImageElement> & {
   wrapperClassName?: string;
   shadow?: false | 'sm' | 'md' | 'lg' | 'xl' | '2xl';
 };
@@ -21,7 +21,7 @@ export const Thumbnail = ({ wrapperClassName, shadow = 'xl', className, ...props
         },
       )}
     >
-      <NextImage
+      <img
         className={classNames(
           'rounded-lg transition-all ease-in-out duration-500 delay-100 hover:scale-110',
           className,
@@ -40,7 +40,7 @@ export const ReflectedImage = ({ wrapperClassName, shadow, ...imageProps }: Thum
       </div>
 
       <div className="relative grayscale ml-24 lg:ml-auto">
-        <NextImage {...imageProps} className={classNames('rounded-xl', imageProps.className)} />
+        <img {...imageProps} className={classNames('rounded-xl', imageProps.className)} />
       </div>
     </div>
   );

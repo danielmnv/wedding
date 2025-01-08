@@ -9,7 +9,7 @@ import { useAnimationView } from '../hooks/use-animation-view';
 import { Icon } from '../components/Icon';
 
 export const CountdownView = () => {
-  const { countdown } = useApp();
+  const { date, countdown } = useApp();
 
   const renderer = ({ days, hours, minutes, seconds, completed }: CountdownRenderProps) => {
     if (completed) {
@@ -44,7 +44,7 @@ export const CountdownView = () => {
 
       <div className="container">
         <div className="w-full flex flex-row md:justify-center md:gap-20">
-          <Countdown date={countdown!.date} renderer={renderer} />
+          <Countdown date={date} renderer={renderer} />
         </div>
       </div>
     </Section>

@@ -7,9 +7,5 @@ export const Section = ({
   children,
   className,
 }: PropsWithChildren<{ section?: EventSection; className?: string }>) => {
-  return section ? (
-    <section id={section.title.replaceAll(' ', '-').toLowerCase()} className={classNames('section', className)}>
-      {children}
-    </section>
-  ) : null;
+  return section ? <section className={classNames('section', className)}>{children}</section> : null;
 };

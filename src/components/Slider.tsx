@@ -28,7 +28,7 @@ export const Slider = ({}) => {
     >
       {slides.map((slide, idx) => (
         <SwiperSlide className="card rounded-none bg-base-100 p-5" key={`slider-${idx}`}>
-          <NextImage src={`/photos/slider/slide${idx + 1}.jpeg`} alt={`Slide ${idx}`} width={384} height={0} />
+          <img src={`/photos/slider/slide${idx + 1}.jpeg`} alt={`Slide ${idx}`} width={384} height={0} />
         </SwiperSlide>
       ))}
     </Swiper>

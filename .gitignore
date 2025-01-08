@@ -41,6 +41,7 @@ apphosting.local.yaml
 # Firebase build and deployment files
 /firebase-debug.log
 /firebase-debug.*.log
+*.log
 .firebaserc
 
 # Firebase Hosting

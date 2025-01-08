@@ -11,7 +11,7 @@ export enum PersonType {
 }
 
 class Couple extends Person {
-  nickname!: string;
+  shortName!: string;
   phoneNumber!: string;
   title!: string;
   parents!: [Person, Person];
