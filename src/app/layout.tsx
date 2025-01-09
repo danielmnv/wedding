@@ -12,17 +12,21 @@ async function fetchEvent(): Promise<Event> {
 
 export async function generateMetadata(): Promise<Metadata> {
   const { bride, groom, metadata } = await fetchEvent();
+  const title = `${bride.shortName} & ${groom.shortName}`;
 
   return {
-    title: `${bride.shortName} & ${groom.shortName}`,
+    title,
     description: metadata.description,
+    openGraph: {
+      title,
+      description: metadata.description,
+      type: 'website',
+    },
   };
 }
 
 export default async function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   const { date, bride, groom, sections } = await fetchEvent();
-
-  console.log(date);
 
   return (
     <html lang="en" className="dark-theme">

@@ -1,6 +1,6 @@
 'use client';
 
-import { Subtitle, Text, Title } from '../components/Typography';
+import { Subtitle, Text } from '../components/Typography';
 import { GuestAttendance, Invitation, RSVPSection } from '../types/rsvp';
 import { useFirestore } from '../hooks/use-firestore';
 import { Dispatch, SetStateAction, useState } from 'react';
