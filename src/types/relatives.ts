@@ -10,7 +10,7 @@ export type RelativesSection = Section<{
   godparents: {
     title: string;
     items: {
-      object: string;
+      object?: string;
       couple: [Person, Person];
     }[];
   };

@@ -1,5 +1,4 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
-import NextImage from 'next/image';
 import { Autoplay, EffectCards, Pagination } from 'swiper/modules';
 
 // Import Swiper styles
@@ -9,9 +8,11 @@ import 'swiper/css/effect-cards';
 
 // Import Swiper styles
 import 'swiper/css';
+import { useApp } from '../hooks/use-app';
 
 export const Slider = ({}) => {
-  const slides = Array.from({ length: 5 }).map((_, index) => `Slide ${index + 1}`);
+  const { slides } = useApp();
+
   return (
     <Swiper
       effect={'cards'}
@@ -27,8 +28,8 @@ export const Slider = ({}) => {
       }}
     >
       {slides.map((slide, idx) => (
-        <SwiperSlide className="card rounded-none bg-base-100 p-5" key={`slider-${idx}`}>
-          <img src={`/photos/slider/slide${idx + 1}.jpeg`} alt={`Slide ${idx}`} width={384} height={0} />
+        <SwiperSlide className="card rounded-none bg-base-100 p-5" key={`slide-${idx}`}>
+          <img src={`/photos/slideshow/${slide}`} alt={`Slide ${idx}`} width={384} height={0} />
         </SwiperSlide>
       ))}
     </Swiper>

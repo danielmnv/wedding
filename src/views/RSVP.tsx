@@ -41,13 +41,13 @@ export const RSVPView = () => {
       <div className="relative">
         {/* Backdrop */}
         <div className="w-full lg:w-5/6 overflow-hidden rounded-lg">
-          <img src="/photos/1CC787A6-E25A-4246-9B2B-8E63542C4079.jpeg" alt="Pass" />
+          <img src="/photos/6842D463-D700-4746-8130-039109DD535B.jpeg" alt="RSVP" />
         </div>
 
         {/* Card */}
         <div
           ref={ref}
-          className="lg:absolute lg:top-1/2 lg:right-0 lg:-translate-y-1/2 lg:translate-x-0 lg:mt-0 -mt-32 flex justify-center"
+          className="lg:absolute lg:top-1/2 lg:right-0 lg:-translate-y-1/2 lg:translate-x-0 lg:mt-0 -mt-20 flex justify-center"
           style={{
             transform: isInView
               ? !isDesktop

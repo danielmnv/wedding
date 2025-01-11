@@ -28,7 +28,7 @@ export type RSVPSection = Section<{
     error: string;
   };
   confirmation: {
-    title: string;
+    title?: string;
     description: string;
     buttonText: string;
   };

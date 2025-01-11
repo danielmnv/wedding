@@ -49,7 +49,10 @@ const DEFAULT_VALUE: DictionarySection & {
   date?: string;
   bride?: Bride;
   groom?: Groom;
-} = {};
+  slides: string[];
+} = {
+  slides: [],
+};
 
 export const AppContext = createContext(DEFAULT_VALUE);
 
@@ -59,11 +62,12 @@ export const AppContextProvider = ({
   bride,
   groom,
   sections,
-}: PropsWithChildren<{ bride: Bride; groom: Groom; date: string; sections: EventSection[] }>) => {
+  slides,
+}: PropsWithChildren<{ bride: Bride; groom: Groom; date: string; sections: EventSection[]; slides: string[] }>) => {
   const dictionarySection = parseSections(sections);
 
   return (
-    <AppContext.Provider value={{ ...dictionarySection, date, bride, groom }}>
+    <AppContext.Provider value={{ ...dictionarySection, date, bride, groom, slides }}>
       <ToastContainer />
       <Navbar title={`${bride.shortName} & ${groom.shortName}`} />
 

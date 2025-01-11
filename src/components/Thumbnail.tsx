@@ -35,7 +35,7 @@ export const Thumbnail = ({ wrapperClassName, shadow = 'xl', className, ...props
 export const ReflectedImage = ({ wrapperClassName, shadow, ...imageProps }: ThumbnailProps) => {
   return (
     <div className="relative flex flex-col-reverse lg:flex-col items-center lg:items-end">
-      <div className="relative z-10 w-fit -mt-64 mr-24 md:mr-12 lg:mr-auto lg:mt-auto lg:absolute lg:top-48 lg:right-48 lg:translate-x-0">
+      <div className="relative z-10 w-fit -mt-52 mr-24 md:mr-12 lg:mr-auto lg:mt-auto lg:absolute lg:top-48 lg:right-48 lg:translate-x-0">
         <Thumbnail wrapperClassName={wrapperClassName} shadow={shadow} {...imageProps} />
       </div>
 

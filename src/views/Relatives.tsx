@@ -6,7 +6,6 @@ import { ReflectedImage } from '../components/Thumbnail';
 import { Section } from '../components/Section';
 import { useApp } from '../hooks/use-app';
 import { useAnimationView } from '../hooks/use-animation-view';
-import { useEffect } from 'react';
 
 export const RelativesView = () => {
   const { bride, groom, relatives } = useApp();
@@ -34,7 +33,7 @@ export const RelativesView = () => {
           {/* TODO: add alt and src */}
           <ReflectedImage
             shadow="xl"
-            src="/photos/4E4DA42D-004A-4B08-938A-48BA945C5D6E.jpeg"
+            src="/photos/75475AC1-568D-4C60-B17E-A8DBA35D236F_1_105_c.jpeg"
             alt="Hello"
             width={280}
             height={0}
@@ -52,7 +51,7 @@ const List = ({
 }: {
   title: string;
   text?: string;
-  list: { subtitle: string; couple: [Person, Person] }[];
+  list: { subtitle?: string; couple: [Person, Person] }[];
 }) => {
   return (
     <>
@@ -71,22 +70,24 @@ const List = ({
   );
 };
 
-const CoupleView = ({ subtitle, couple }: { subtitle: string; couple: [Person, Person] }) => {
+const CoupleView = ({ subtitle, couple }: { subtitle?: string; couple: [Person, Person] }) => {
   const { ref, isInView } = useAnimationView<HTMLDivElement>();
 
   return (
     <div className="flex flex-col items-center md:items-start gap-4">
-      <div
-        ref={ref}
-        className="bg-secondary py-1.5 px-8 rounded-lg min-w-fit max-w-full w-48"
-        style={{
-          opacity: isInView ? 1 : 0,
-          transform: `translateY(${isInView ? 0 : -20}px)`,
-          transition: 'all 0.4s cubic-bezier(0.17, 0.55, 0.55, 1) 0.2s',
-        }}
-      >
-        <Subtitle hideAnimation className="text-white !text-lg text-center md:text-start" content={subtitle} />
-      </div>
+      {subtitle && (
+        <div
+          ref={ref}
+          className="bg-secondary py-1.5 px-8 rounded-lg min-w-fit max-w-full w-48"
+          style={{
+            opacity: isInView ? 1 : 0,
+            transform: `translateY(${isInView ? 0 : -20}px)`,
+            transition: 'all 0.4s cubic-bezier(0.17, 0.55, 0.55, 1) 0.2s',
+          }}
+        >
+          <Subtitle hideAnimation className="text-white !text-lg text-center md:text-start" content={subtitle} />
+        </div>
+      )}
 
       <ol className="flex flex-col items-center md:items-start">
         {couple.map(({ name }, idx) => (

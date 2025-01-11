@@ -61,10 +61,9 @@
         "text": "Cultiven la paciencia, el respeto y la comunicación, y siempre sean el refugio del uno para el otro."
       },
       "godparents": {
-        "title": "Nuestros Padrinos",
+        "title": "Padrinos de Velación",
         "items": [
           {
-            "object": "Velación",
             "couple": [
               {
                 "name": {
@@ -124,13 +123,18 @@
           "symbol": "Drink"
         },
         {
-          "title": "Cena",
+          "title": "Brindis",
           "time": "19:00 hrs",
+          "symbol": "Toast"
+        },
+        {
+          "title": "Cena",
+          "time": "19:10 hrs",
           "symbol": "Dinner"
         },
         {
           "title": "Vals",
-          "time": "20:00 hrs",
+          "time": "20:15 hrs",
           "symbol": "Vals"
         },
         {
@@ -204,8 +208,7 @@
         "error": "¡Error al enviar la confirmación!"
       },
       "confirmation": {
-        "title": "Confirmación",
-        "description": "Gracias por confirmar tu asistencia.",
+        "description": "¡Gracias por confirmar! Nos emociona saber que estarás con nosotros en este día tan especial.",
         "buttonText": "Cerrar"
       }
     }
