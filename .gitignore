@@ -59,7 +59,6 @@ hosting/.cache
 
 # Development files
 data.json
-data.example.json
 .env.development
 .env
 *.xlsx
