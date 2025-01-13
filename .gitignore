@@ -58,7 +58,8 @@ hosting/.cache
 .emulator/*
 
 # Development files
-apphosting.local.yaml
+data.json
+data.example.json
 .env.development
 .env
 *.xlsx

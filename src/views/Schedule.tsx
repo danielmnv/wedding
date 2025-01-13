@@ -1,6 +1,5 @@
 'use client';
 
-import 'react-vertical-timeline-component/style.min.css';
 import { Text, Title } from '../components/Typography';
 import classNames from 'classnames';
 import { Icon } from '../components/Icon';

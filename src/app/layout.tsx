@@ -7,8 +7,15 @@ import { promises as fs } from 'fs';
 import path from 'path';
 
 async function fetchEvent(): Promise<Event> {
-  const file = await fs.readFile(process.cwd() + '/data.json', 'utf8');
-  return JSON.parse(file);
+  if (process.env.NODE_ENV === 'development') {
+    const file = await fs.readFile(process.cwd() + '/data.example.json', 'utf8');
+    return JSON.parse(file);
+  }
+
+  if (!process.env.WEDDING_DATA) {
+    throw new Error('WEDDING_DATA environment variable is not set.');
+  }
+  return JSON.parse(process.env.WEDDING_DATA);
 }
 
 async function fetchSlides() {
