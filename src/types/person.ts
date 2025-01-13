@@ -1,8 +1,5 @@
 export class Person {
-  name!: {
-    firstName: string;
-    lastName: string;
-  };
+  name!: string;
 }
 
 export enum PersonType {

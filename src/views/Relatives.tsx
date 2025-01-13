@@ -30,11 +30,10 @@ export const RelativesView = () => {
         </div>
 
         <div className="relative h-fit md:h-[calc(300px_+_16rem)]">
-          {/* TODO: add alt and src */}
           <ReflectedImage
             shadow="xl"
-            src="/photos/75475AC1-568D-4C60-B17E-A8DBA35D236F_1_105_c.jpeg"
-            alt="Hello"
+            src="/photos/relatives-showcase.jpg"
+            alt="Wedding Relatives"
             width={280}
             height={0}
           />
@@ -92,7 +91,7 @@ const CoupleView = ({ subtitle, couple }: { subtitle?: string; couple: [Person, 
       <ol className="flex flex-col items-center md:items-start">
         {couple.map(({ name }, idx) => (
           <li key={`list-subtitle-${subtitle}-${idx}`}>
-            <Text content={`${name.firstName} ${name.lastName}`} />
+            <Text content={name} />
           </li>
         ))}
       </ol>

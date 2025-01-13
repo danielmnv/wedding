@@ -32,9 +32,6 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
-apphosting.local.yaml
-.env.development
-
 # ide
 .idea/
 
@@ -59,3 +56,10 @@ hosting/.cache
 /.firebase/
 /emulator-ui/
 .emulator/*
+
+# Development files
+apphosting.local.yaml
+.env.development
+.env
+*.xlsx
+credentials.json

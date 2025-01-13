@@ -83,7 +83,7 @@ const TimelineItem = ({
       >
         <Icon symbol={symbol} stroke="oklch(var(--a))" />
         <Text hideAnimation content={time} />
-        <Text hideAnimation content={title} />
+        <Text hideAnimation content={title} className="text-center" />
       </div>
       {!last && (
         <motion.hr

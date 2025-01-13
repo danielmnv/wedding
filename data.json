@@ -4,48 +4,30 @@
   },
   "date": "2025-03-22T16:00:00",
   "bride": {
-    "name": {
-      "firstName": "Patricia Carolina",
-      "lastName": "Viques Huerta"
-    },
+    "name": "Patricia Carolina Viques Huerta",
     "shortName": "Carolina",
     "phoneNumber": "5214494944678",
     "title": "Novia",
     "parents": [
       {
-        "name": {
-          "firstName": "Carmen Patricia",
-          "lastName": "Huerta Mendoza"
-        }
+        "name": "Carmen Patricia Huerta Mendoza"
       },
       {
-        "name": {
-          "firstName": "Rubén",
-          "lastName": "Viques Sánchez"
-        }
+        "name": "Rubén Viques Sánchez"
       }
     ]
   },
   "groom": {
-    "name": {
-      "firstName": "Carlos Daniel",
-      "lastName": "Molina Vargas"
-    },
+    "name": "Carlos Daniel Molina Vargas",
     "shortName": "Daniel",
     "phoneNumber": "5214492044278",
     "title": "Novio",
     "parents": [
       {
-        "name": {
-          "firstName": "Rocío Candelaria",
-          "lastName": "Vargas Daniel"
-        }
+        "name": "Rocío Candelaria Vargas Daniel"
       },
       {
-        "name": {
-          "firstName": "Juan Carlos",
-          "lastName": "Molina López"
-        }
+        "name": "Juan Carlos Molina López"
       }
     ]
   },
@@ -66,16 +48,10 @@
           {
             "couple": [
               {
-                "name": {
-                  "firstName": "Ilse Estefanía",
-                  "lastName": "Viques Huerta"
-                }
+                "name": "Ilse Estefanía Viques Huerta"
               },
               {
-                "name": {
-                  "firstName": "Alejandro",
-                  "lastName": "Valenciano"
-                }
+                "name": "Alejandro Valenciano"
               }
             ]
           }
@@ -91,7 +67,7 @@
       "buttonText": "Ubicación",
       "items": [
         {
-          "address": "Lic Miguel de la Madrid Hurtado 2602, Trojes de Kristal, 20118 Aguascalientes, Ags",
+          "address": "Lic Miguel de la Madrid Hurtado 2602, Trojes de Kristal",
           "background": "https://firebasestorage.googleapis.com/v0/b/wedding-invitation-dd705.appspot.com/o/church.jpg?alt=media&token=03340d9c-f645-40c9-8576-7955caedbaf1",
           "name": "Capilla San Peregrino Laziosi",
           "time": "16:00 hrs",
@@ -99,7 +75,7 @@
           "url": "https://www.google.com/maps/dir/?api=1&destination=Capilla%20San%20Peregrino%20Laziosi&destination_place_id=ChIJ53gSKz7vKYQRP23IfD8w1X8"
         },
         {
-          "address": "Av. Guadalupe Gonzalez 1116, 20329 Pocitos, Ags.",
+          "address": "Av. Guadalupe Gonzalez 1116, Pocitos",
           "background": "https://cdn0.bodas.com.mx/vendor/9559/3_2/960/jpg/37177593-237396550210132-3660136885876948992-n_5_199559-158214207322648.jpeg",
           "name": "Casa de Piedra",
           "time": "18:00 hrs",
@@ -118,7 +94,7 @@
           "symbol": "Ring"
         },
         {
-          "title": "Recepción",
+          "title": "Cóctel de Bienvenida",
           "time": "18:00 hrs",
           "symbol": "Drink"
         },

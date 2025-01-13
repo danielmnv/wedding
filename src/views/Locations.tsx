@@ -61,7 +61,14 @@ const LocationCard = ({
       >
         <Subtitle content={title} />
         <Text content={name} />
-        <Text content={time} />
+        <Text
+          content={address}
+          className={classNames('text-center', {
+            'md:text-start': reverse,
+            'md:text-right': !reverse,
+          })}
+        />
+        <Text content={time} className="font-semibold" />
 
         <Button type="secondary" onClick={open}>
           {buttonText}

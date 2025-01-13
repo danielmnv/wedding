@@ -41,7 +41,7 @@ export const RSVPView = () => {
       <div className="relative">
         {/* Backdrop */}
         <div className="w-full lg:w-5/6 overflow-hidden rounded-lg">
-          <img src="/photos/6842D463-D700-4746-8130-039109DD535B.jpeg" alt="RSVP" />
+          <img src="/photos/rsvp-section.jpg" alt="RSVP" />
         </div>
 
         {/* Card */}
@@ -166,7 +166,7 @@ const InvitationCard = ({ list, toastMessages, invitation, onConfirm, onCancel }
   const [guests, setGuests] = useState(invitation.guests);
   const [message, setMessage] = useState<string>('');
   const [isSubmitting, setIsSubmitting] = useState<boolean>(false);
-  const everyoneAttending = guests.every((g) => g.attending === undefined || g.attending);
+  const everyoneAttending = guests.every((g) => g.attending === true);
 
   const handleCancel = () => {
     if (isSubmitting) return;
@@ -226,9 +226,9 @@ const InvitationCard = ({ list, toastMessages, invitation, onConfirm, onCancel }
           <tbody>
             {guests.map((g) => (
               <GuestItem
-                key={`guest-${g.name.firstName}-${g.name.lastName}`}
+                key={`guest-${g.name}`}
                 name={g.name}
-                isAttending={g.attending ?? true}
+                isAttending={g.attending ?? false}
                 setGuests={setGuests}
               />
             ))}
@@ -291,7 +291,7 @@ const GuestItem = ({
         </label>
       </th>
       <td>
-        <Text hideAnimation content={`${name.firstName} ${name.lastName}`} className="text-sm" />
+        <Text hideAnimation content={`${name}`} className="text-sm" />
       </td>
     </tr>
   );

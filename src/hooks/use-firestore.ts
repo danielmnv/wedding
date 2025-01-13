@@ -19,7 +19,7 @@ export const useFirestore = () => {
   async function updateInvitation(code: string, guests: GuestAttendance[], gratitudeMessage?: string): Promise<void> {
     const docRef = doc(db, 'invitations', code);
     await updateDoc(docRef, {
-      guests: guests.map((g) => ({ ...g, attending: g.attending ?? true })),
+      guests: guests.map((g) => ({ ...g, attending: g.attending ?? false })),
       ...(gratitudeMessage && { gratitudeMessage: arrayUnion(gratitudeMessage) }),
     });
   }

@@ -10,6 +10,7 @@ import { Slider } from '../components/Slider';
 import { useAnimationView } from '../hooks/use-animation-view';
 import { useEffect } from 'react';
 import { motion } from 'motion/react';
+import { Button } from '../components/Button';
 
 export const GiftRegistryView = () => {
   const { giftRegistry } = useApp();
@@ -37,7 +38,6 @@ const CompanyGifts = ({ symbol, eventId, url, text }: CompanyRegistry) => {
   const { ref, isInView, animate } = useAnimationView<HTMLDivElement>();
 
   function showGifts() {
-    // gtag('event', 'page_view', { 'page_location': url, 'title': name });
     window.open(url.replace(':eventId', eventId), '_blank');
   }
 
@@ -54,6 +54,10 @@ const CompanyGifts = ({ symbol, eventId, url, text }: CompanyRegistry) => {
       <motion.div className="gift-icon" style={{ opacity: 0, translateY: '30px' }}>
         <Icon symbol={symbol} stroke="oklch(var(--a))" />
       </motion.div>
+
+      <Button onClick={() => {}} type="secondary">
+        {symbol}
+      </Button>
 
       <motion.div className="gift-info" style={{ opacity: 0 }}>
         <Text

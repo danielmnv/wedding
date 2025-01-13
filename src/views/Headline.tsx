@@ -31,11 +31,11 @@ const Banner = ({ alt }: { alt: string }) => {
     <div className="banner-wrapper">
       <div className="banner">
         <picture className="block">
-          <source media="(max-width: 639px)" srcSet="/photos/CC3FCF35-2401-441D-9C30-1EF9CF5E44E6_1_105_c.jpeg" />
-          <source media="(min-width: 640px)" srcSet="/photos/2F380C8D-8924-474D-B379-18922E98B11A.jpeg" />
+          <source media="(max-width: 639px)" srcSet="/photos/mobile-banner.jpg" />
+          <source media="(min-width: 640px)" srcSet="/photos/desktop-banner.jpg" />
           <img
-            className="relative opacity-70 w-full h-full object-cover object-center"
-            src="/photos/2F380C8D-8924-474D-B379-18922E98B11A.jpeg"
+            className="relative opacity-70 w-full h-full object-cover object-bottom"
+            src="/photos/desktop-banner.jpg"
             alt={alt}
           />
         </picture>
@@ -124,7 +124,7 @@ const Spotlight = ({ date }: { date: string }) => {
         opacity: isInView ? 1 : 0,
       }}
     >
-      <Number number={`${dateObj.getDate()}`} />
+      <Number number={`${dateObj.getDate()}`.padStart(2, '0')} />
       <Divider />
       <Number number={`${dateObj.getMonth() + 1}`.padStart(2, '0')} />
       <Divider />
