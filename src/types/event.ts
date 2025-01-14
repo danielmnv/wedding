@@ -16,6 +16,7 @@ export type Event = {
   metadata: {
     title: string;
     description: string;
+    url: string;
   };
 };
 

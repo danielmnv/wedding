@@ -42,6 +42,8 @@ export async function generateMetadata(): Promise<Metadata> {
       title,
       description: metadata.description,
       type: 'website',
+      siteName: title,
+      url: metadata.url,
     },
   };
 }
