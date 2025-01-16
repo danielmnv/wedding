@@ -1,0 +1,182 @@
+{
+  "metadata": {
+    "description": "22 | March | 2025 \uD83D\uDC8D\uD83D\uDC95'"
+  },
+  "date": "2025-03-22T16:00:00",
+  "bride": {
+    "name": "Bride's Name",
+    "shortName": "Bride's Short Name",
+    "phoneNumber": "555555555",
+    "title": "Bride",
+    "parents": [
+      {
+        "name": "Bride's Mother"
+      },
+      {
+        "name": "Bride's Father"
+      }
+    ]
+  },
+  "groom": {
+    "name": "Groom's Name",
+    "shortName": "Groom's Short Name",
+    "phoneNumber": "555555555",
+    "title": "Groom",
+    "parents": [
+      {
+        "name": "Groom's Mother"
+      },
+      {
+        "name": "Groom's Father"
+      }
+    ]
+  },
+  "sections": [
+    {
+      "type": "Headline",
+      "phrase": "You are invited to our wedding. Yay! \uD83D\uDC8D\uD83D\uDC95'"
+    },
+    {
+      "type": "Relatives",
+      "parents": {
+        "title": "Our Parents",
+        "text": "We are very grateful to our parents for their unconditional love and support. We love you!"
+      },
+      "godparents": {
+        "title": "Our Godparents",
+        "items": [
+          {
+            "object": "Rings",
+            "couple": [
+              {
+                "name": "Godparent 1"
+              },
+              {
+                "name": "Godparent 2"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "type": "Countdown",
+      "title": "Countdown"
+    },
+    {
+      "type": "Locations",
+      "buttonText": "Route",
+      "items": [
+        {
+          "address": "Chapel Address",
+          "background": "https://cdn0.bodas.com.mx/article-real-wedding/386/3_2/1280/jpg/1570614.webp",
+          "name": "Chapel Name",
+          "time": "18:00 hrs",
+          "title": "Ceremony",
+          "url": "https://www.google.com/maps/dir/?api=1&destination=Chapel%20Name&destination_place_id=placeId"
+        },
+        {
+          "address": "Salon Address",
+          "background": "https://cdn0.bodas.com.mx/vendor/7548/3_2/1280/png/vista-exterior.jpeg",
+          "name": "Salon Name",
+          "time": "20:00 hrs",
+          "title": "Reception",
+          "url": "https://www.google.com/maps/dir/?api=1&destination=Salon%20Name&destination_place_id=placeId"
+        }
+      ]
+    },
+    {
+      "type": "Schedule",
+      "title": "Schedule",
+      "items": [
+        {
+          "title": "Ceremony",
+          "time": "18:00 hrs",
+          "symbol": "Ring"
+        },
+        {
+          "title": "Drink",
+          "time": "20:00 hrs",
+          "symbol": "Drink"
+        },
+        {
+          "title": "Dinner",
+          "time": "21:00 hrs",
+          "symbol": "Dinner"
+        },
+        {
+          "title": "Waltz",
+          "time": "22:15 hrs",
+          "symbol": "Waltz"
+        },
+        {
+          "title": "Dance",
+          "time": "22:30 hrs",
+          "symbol": "Dance"
+        },
+        {
+          "title": "End",
+          "time": "02:00 hrs",
+          "symbol": "Love"
+        }
+      ]
+    },
+    {
+      "type": "GiftRegistry",
+      "title": "Gifts",
+      "items": [
+        {
+          "symbol": "Amazon",
+          "eventId": "123456",
+          "text": ":eventId",
+          "url": "https://www.amazon.com/wedding/share/:eventId"
+        }
+      ]
+    },
+    {
+      "type": "DressCode",
+      "items": [
+        {
+          "title": "Dress Code",
+          "symbol": ["Dress", "Suit"],
+          "description": "Formal"
+        },
+        {
+          "title": "Kids Not Allowed",
+          "symbol": "KidsNotAllowed",
+          "description": "Please leave the kids at home."
+        }
+      ]
+    },
+    {
+      "type": "RSVP",
+      "title": "RSVP",
+      "search": {
+        "description": "Enter the guest code.",
+        "placeholder": "Guest Code",
+        "buttonText": "Search",
+        "notFoundText": "Guest not found.",
+        "inputErrorText": "Enter a valid code."
+      },
+      "list": {
+        "description": "Select the guests who will attend.",
+        "headerGuest": "Guest",
+        "buttonText": "Confirm",
+        "buttonCancelText": "Cancel",
+        "message": {
+          "description": "Message",
+          "placeholder": "(Optional)"
+        }
+      },
+      "toastMessages": {
+        "loading": "Loading...",
+        "success": "Confirmation sent!",
+        "error": "Error sending confirmation."
+      },
+      "confirmation": {
+        "description": "Your confirmation has been sent.",
+        "buttonText": "Close"
+      }
+    }
+  ]
+}

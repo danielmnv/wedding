@@ -1,3 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Croissant+One&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+:root {
+  font-family: 'Merriweather', serif;
+  font-optical-sizing: auto;
+  --toastify-font-family: 'Merriweather', serif;
+}
+
+body {
+  @apply bg-base-100;
+}
+
+@layer components {
+  .section {
+    @apply py-20 relative;
+  }
+
+  .cubic-bezier {
+    transition: all 0.4s cubic-bezier(0.17, 0.55, 0.55, 1) 0.2s;
+  }
+
+  .countdown-font {
+    font-family: 'Inter', serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+  }
+
+  .title-font {
+    font-family: 'Croissant One', serif;
+    font-optical-sizing: auto;
+    @apply text-2xl font-semibold text-neutral-500 cubic-bezier;
+  }
+
+  .subtitle-font {
+    font-optical-sizing: auto;
+    @apply text-xl font-bold text-neutral-600 cubic-bezier;
+  }
+
+  .navigation {
+    @apply navbar
+    fixed w-full z-50 bg-transparent
+    cubic-bezier;
+
+    &.navigation--sticky {
+      @apply bg-base-100 bg-opacity-60 shadow-md backdrop-blur-md;
+    }
+
+    .navigation-divider {
+      @apply divider divider-horizontal mx-1 divider-neutral;
+
+      &:before,
+      &:after {
+        @apply cubic-bezier;
+      }
+
+      &.divider--scrolling {
+        @apply divider-accent;
+      }
+    }
+  }
+
+  .banner-wrapper {
+    @apply relative overflow-hidden;
+
+    &:after {
+      @apply absolute z-10 block top-0 w-full h-full content-[''];
+      box-shadow: inset 0 -100px 50px -25px theme('colors.neutral');
+    }
+  }
+
+  .banner-height {
+    @apply relative h-[calc(100vh_-_250px)] min-h-[700px] lg:min-h-[600px];
+  }
+
+  .banner {
+    @apply banner-height overflow-hidden bg-black grayscale;
+    transition: all 0.4s cubic-bezier(0.17, 0.55, 0.55, 1) 0.4s;
+
+    > picture {
+      @apply banner-height;
+    }
+  }
+}
