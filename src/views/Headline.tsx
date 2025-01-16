@@ -127,7 +127,7 @@ const Spotlight = ({ date }: { date: string }) => {
     >
       <Number number={`${dateObj.getDate()}`.padStart(2, '0')} />
       <Divider />
-      <Number number={`${dateObj.getMonth() + 1}`.padStart(2, '0')} />
+      <Number number={"Marzo"} />
       <Divider />
       <Number number={`${dateObj.getFullYear()}`.substring(2)} />
     </div>
