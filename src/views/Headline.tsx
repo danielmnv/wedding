@@ -20,6 +20,7 @@ export const Headline = () => {
           <CurvedText text={headline!.phrase} />
           <CoupleHeadline bride={bride!} groom={groom!} />
           {date && <Spotlight date={date} />}
+          <Text content={headline!.additionalText} className="text-center text-accent px-6 md:px-0" />
         </div>
       </div>
     </Section>

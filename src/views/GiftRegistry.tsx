@@ -21,8 +21,10 @@ export const GiftRegistryView = () => {
         <Slider />
       </div>
 
-      <div className="container flex flex-col gap-20 items-center">
+      <div className="container flex flex-col gap-12 items-center">
         <Title content={giftRegistry!.title} />
+
+        <Text content={giftRegistry!.text} className="text-center text-sm italic whitespace-pre-wrap px-6 md:px-0" />
 
         <div className="flex gap-20">
           {giftRegistry!.items.map((company) => (
