@@ -57,9 +57,14 @@ hosting/.cache
 /emulator-ui/
 .emulator/*
 
+# Supabase local development
+/supabase/.branches/_current_branch
+/supabase/.temp/cli-latest
+/supabase/config.toml
+
 # Development files
 data.json
 .env.development
 .env
 *.xlsx
-credentials.json
+src/lib/firebase/credentials.json

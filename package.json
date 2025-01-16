@@ -10,6 +10,7 @@
     "prettier:check": "prettier --write './**'"
   },
   "dependencies": {
+    "@supabase/supabase-js": "^2.47.12",
     "@types/react-curved-text": "^2.0.3",
     "classnames": "^2.5.1",
     "dotenv": "^16.4.7",

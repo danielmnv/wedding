@@ -2,7 +2,6 @@
 
 import { Subtitle, Text } from '../components/Typography';
 import { GuestAttendance, Invitation, RSVPSection } from '../types/rsvp';
-import { useFirestore } from '../hooks/use-firestore';
 import { Dispatch, SetStateAction, useState } from 'react';
 import { Icon } from '../components/Icon';
 import { notify, notifyPromise } from '../components/Notification';
@@ -13,6 +12,7 @@ import { Person } from '../types/person';
 import { useAnimationView } from '../hooks/use-animation-view';
 import { useResponsive } from '../hooks/use-responsive';
 import { Button } from '../components/Button';
+import { useApi } from '../hooks/use-api';
 
 type SearchInvitationProps = Pick<RSVPSection, 'title' | 'search'> & {
   setInvitation: (invitation: Invitation) => void;
@@ -88,7 +88,7 @@ export const RSVPView = () => {
 };
 
 const SearchInvitation = ({ title, search, setInvitation }: SearchInvitationProps) => {
-  const { getInvitationByCode } = useFirestore();
+  const { findInvitation } = useApi();
   const { ref, isInView } = useAnimationView<HTMLDivElement>();
 
   const [code, setCode] = useState<string>('');
@@ -101,7 +101,7 @@ const SearchInvitation = ({ title, search, setInvitation }: SearchInvitationProp
     }
 
     try {
-      const invitation = await getInvitationByCode(code);
+      const invitation = await findInvitation(code);
       setCode('');
       setError(undefined);
       setInvitation(invitation);
@@ -160,7 +160,7 @@ const SearchInvitation = ({ title, search, setInvitation }: SearchInvitationProp
 };
 
 const InvitationCard = ({ list, toastMessages, invitation, onConfirm, onCancel }: InvitationCardProps) => {
-  const { updateInvitation } = useFirestore();
+  const { confirmInvitation } = useApi();
   const { ref, isInView } = useAnimationView<HTMLDivElement>();
 
   const [guests, setGuests] = useState(invitation.guests);
@@ -179,7 +179,7 @@ const InvitationCard = ({ list, toastMessages, invitation, onConfirm, onCancel }
     setIsSubmitting(true);
     const log = async () => {
       await new Promise((resolve) => setTimeout(resolve, 1000));
-      await updateInvitation(invitation.id, guests, message);
+      await confirmInvitation(invitation.id, guests, message);
     };
     try {
       await notifyPromise(log(), toastMessages.loading, toastMessages.success, toastMessages.error);
@@ -188,6 +188,10 @@ const InvitationCard = ({ list, toastMessages, invitation, onConfirm, onCancel }
     } finally {
       setIsSubmitting(false);
     }
+  };
+
+  const handleToggleAll = () => {
+    setGuests((prev) => prev.map((g) => ({ ...g, attending: !everyoneAttending })));
   };
 
   return (
@@ -201,28 +205,32 @@ const InvitationCard = ({ list, toastMessages, invitation, onConfirm, onCancel }
     >
       {invitation.header && <Subtitle hideAnimation content={invitation.header} />}
 
-      <Text hideAnimation content={list.description} />
+      <Text hideAnimation content={list.description} className="whitespace-pre-wrap" />
 
       {/* Guest List */}
       <div className="overflow-x-auto">
         <table className="table table-auto">
-          <thead>
-            <tr>
-              <th>
-                <label>
-                  <input
-                    type="checkbox"
-                    className="checkbox checkbox-sm checkbox-accent [--chkfg:oklch(var(--n))]"
-                    checked={everyoneAttending}
-                    onChange={() => setGuests((prev) => prev.map((g) => ({ ...g, attending: !everyoneAttending })))}
-                  />
-                </label>
-              </th>
-              <th>
-                <Text hideAnimation content={list.headerGuest ?? ''} className="text-xs text-base-300" />
-              </th>
-            </tr>
-          </thead>
+          {invitation.guests.length > 1 && (
+            <thead>
+              <tr>
+                <th>
+                  <label>
+                    <input
+                      type="checkbox"
+                      className="checkbox checkbox-sm checkbox-accent [--chkfg:oklch(var(--n))]"
+                      checked={everyoneAttending}
+                      onChange={handleToggleAll}
+                    />
+                  </label>
+                </th>
+                <th>
+                  <div onClick={handleToggleAll}>
+                    <Text hideAnimation content={list.headerGuest ?? ''} className="text-xs text-base-300" />
+                  </div>
+                </th>
+              </tr>
+            </thead>
+          )}
           <tbody>
             {guests.map((g) => (
               <GuestItem

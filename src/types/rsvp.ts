@@ -44,6 +44,7 @@ export type Invitation = {
 
 export type GuestAttendance = Person & {
   attending?: boolean;
+  id: string;
 };
 
 export const InvitationConverter = {
