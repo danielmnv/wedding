@@ -122,7 +122,7 @@ const SearchInvitation = ({ title, search, setInvitation }: SearchInvitationProp
     >
       <Subtitle hideAnimation content={title} className="card-title" />
 
-      <Text hideAnimation content={search.description} />
+      <Text hideAnimation content={search.description} className="whitespace-pre-wrap" />
 
       <label className="form-control w-full">
         <label
