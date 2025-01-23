@@ -1,7 +1,6 @@
 import * as dotenv from 'dotenv';
 import * as XLSX from 'xlsx';
 import path from 'path';
-import * as firebaseMigration from '../firebase/firebase-migration';
 import * as supabaseMigration from '../supabase/supabase-migration';
 
 interface GuestData {
@@ -63,17 +62,13 @@ const args = process.argv.slice(2);
 const actionArg = args.find((arg) => arg.startsWith('--action='));
 const action = actionArg ? actionArg.split('=')[1] : 'test';
 
-// Select database based on environment
-const database = process.env.NEXT_PUBLIC_DATABASE || 'supabase';
-const builder = database === 'supabase' ? supabaseMigration : firebaseMigration;
-
 // Perform the action based on the provided argument
 switch (action) {
   case 'test':
-    builder.test();
+    supabaseMigration.test();
     break;
   case 'delete':
-    builder.deleteAllData();
+    supabaseMigration.deleteAllData();
     break;
   case 'store':
     const filePath = path.join(__dirname, 'Guests.xlsx');
@@ -82,11 +77,11 @@ switch (action) {
 
     let type: 'Bride' | 'Groom' = 'Groom';
     console.log('Storing Groom data...');
-    builder.storeData(groupByInvitationCode(workbook, type, false), type);
+    supabaseMigration.storeData(groupByInvitationCode(workbook, type, false), type);
 
     type = 'Bride';
     console.log('Storing Bride data...');
-    builder.storeData(groupByInvitationCode(workbook, type, false), type);
+    supabaseMigration.storeData(groupByInvitationCode(workbook, type, false), type);
     break;
   default:
     console.log('Invalid action.');

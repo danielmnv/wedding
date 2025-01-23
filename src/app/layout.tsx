@@ -4,7 +4,10 @@ import type { Metadata } from 'next';
 import { AppContextProvider } from '../context/AppContext';
 import { Event } from '../types/event';
 import { promises as fs } from 'fs';
+import { SpeedInsights } from '@vercel/speed-insights/next';
+import { Analytics } from '@vercel/analytics/react';
 import path from 'path';
+import Head from 'next/head';
 
 async function fetchEvent(): Promise<Event> {
   if (process.env.NODE_ENV === 'development') {
@@ -54,10 +57,17 @@ export default async function RootLayout({ children }: Readonly<{ children: Reac
 
   return (
     <html lang="en" className="dark-theme">
+      <Head>
+        <link rel="preload" href="/photos/mobile-banner.jpg" as="image" />
+        <link rel="preload" href="/photos/desktop-banner.jpg" as="image" />
+      </Head>
       <body>
         <AppContextProvider date={date} bride={bride} groom={groom} sections={sections} slides={slides}>
           <div className="overflow-x-hidden">{children}</div>
         </AppContextProvider>
+
+        <SpeedInsights />
+        <Analytics />
       </body>
     </html>
   );

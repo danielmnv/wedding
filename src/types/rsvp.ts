@@ -1,5 +1,4 @@
 import { Person, PersonType } from './person';
-import { DocumentData, QueryDocumentSnapshot } from '@firebase/firestore';
 import { Section } from './event';
 
 export type RSVPSection = Section<{
@@ -45,18 +44,4 @@ export type Invitation = {
 export type GuestAttendance = Person & {
   attending?: boolean;
   id: string;
-};
-
-export const InvitationConverter = {
-  toFirestore(invitation: Invitation): DocumentData {
-    return invitation;
-  },
-  fromFirestore(snapshot: QueryDocumentSnapshot<Invitation>): Invitation {
-    const data = snapshot.data()!;
-
-    return {
-      ...data,
-      id: snapshot.id,
-    };
-  },
 };
