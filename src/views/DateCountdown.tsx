@@ -4,26 +4,64 @@ import Countdown, { CountdownRenderProps } from 'react-countdown';
 import { Text, Title } from '../components/Typography';
 import { Section } from '../components/Section';
 import { useApp } from '../hooks/use-app';
-import { Bride, Groom } from '../types/person';
-import { useAnimationView } from '../hooks/use-animation-view';
-import { Icon } from '../components/Icon';
+import { Fireworks } from '@fireworks-js/react';
+import type { FireworksHandlers } from '@fireworks-js/react';
+import { motion } from 'motion/react';
+import { useRef } from 'react';
 
 export const CountdownView = () => {
   const { date, countdown } = useApp();
+  const ref = useRef<FireworksHandlers>(null);
 
   const renderer = ({ days, hours, minutes, seconds, completed }: CountdownRenderProps) => {
     if (completed) {
-      // TODO: Add a completed state
       // Render a completed state
       return (
-        <div className="w-full text-center">
-          <p className="pb-1 font-extrabold text-3xl md:text-5xl md:font-semibold">
-            event.headline.countdown.start.title
-          </p>
-          <p className="tracking-widest font-extrabold text-xs md:text-sm md:font-semibold">
-            event.headline.countdown.start.text
-          </p>
-        </div>
+        <motion.div
+          className="w-full flex flex-col items-center gap-2"
+          style={{ opacity: 0 }}
+          animate={{
+            opacity: 1,
+            transition: {
+              duration: 0.5,
+            },
+          }}
+        >
+          <Text
+            content={countdown?.postCountdown.text}
+            className="font-extrabold text-3xl md:text-5xl md:font-semibold"
+            hideAnimation
+          />
+          <Text
+            content={countdown?.postCountdown.secondaryText}
+            className="tracking-widest font-extrabold text-xs md:text-sm md:font-semibold"
+            hideAnimation
+          />
+
+          <Fireworks
+            ref={ref}
+            options={{
+              hue: {
+                min: 40,
+                max: 40,
+              },
+              delay: {
+                min: 30,
+                max: 50,
+              },
+              traceSpeed: 2,
+            }}
+            style={{
+              top: 0,
+              left: 0,
+              width: '100%',
+              height: '100%',
+              position: 'fixed',
+              background: 'transparent',
+              zIndex: 1000,
+            }}
+          />
+        </motion.div>
       );
     } else {
       // Render a countdown

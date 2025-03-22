@@ -10,6 +10,7 @@
     "prettier:check": "prettier --write './**'"
   },
   "dependencies": {
+    "@fireworks-js/react": "^2.10.8",
     "@supabase/supabase-js": "^2.47.12",
     "@types/react-curved-text": "^2.0.3",
     "@vercel/analytics": "^1.4.1",
