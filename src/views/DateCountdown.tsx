@@ -36,31 +36,7 @@ export const CountdownView = () => {
             content={countdown?.postCountdown.secondaryText}
             className="tracking-widest font-extrabold text-xs md:text-sm md:font-semibold"
             hideAnimation
-          />
-
-          <Fireworks
-            ref={ref}
-            options={{
-              hue: {
-                min: 40,
-                max: 40,
-              },
-              delay: {
-                min: 30,
-                max: 50,
-              },
-              traceSpeed: 2,
-            }}
-            style={{
-              top: 0,
-              left: 0,
-              width: '100%',
-              height: '100%',
-              position: 'fixed',
-              background: 'transparent',
-              zIndex: 1000,
-            }}
-          />
+            />
         </motion.div>
       );
     } else {
